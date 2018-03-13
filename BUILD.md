@@ -18,6 +18,11 @@ export PATH=$PATH:$GOPATH/bin
 make deps
 make
 make dist
-make release
 ```
 
+### release
+```bash
+git tag v0.6.1
+git push origin v0.6.1
+make release
+```
