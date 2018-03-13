@@ -27,3 +27,10 @@ _testmain.go
 # Created by .ignore support plugin (hsz.mobi)
 
 dockerize
+
+# IDEs and editors
+/.idea
+*.sublime-workspace
+.vscode/*
+
+dockerize-*

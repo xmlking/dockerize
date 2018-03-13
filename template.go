@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"strconv"
 	"strings"
-	"syscall"
+	//"syscall"
 	"text/template"
 
 	"github.com/jwilder/gojq"
@@ -159,14 +159,14 @@ func generateFile(templatePath, destPath string) bool {
 		log.Fatalf("template error: %s\n", err)
 	}
 
-	if fi, err := os.Stat(destPath); err == nil {
-		if err := dest.Chmod(fi.Mode()); err != nil {
-			log.Fatalf("unable to chmod temp file: %s\n", err)
-		}
-		if err := dest.Chown(int(fi.Sys().(*syscall.Stat_t).Uid), int(fi.Sys().(*syscall.Stat_t).Gid)); err != nil {
-			log.Fatalf("unable to chown temp file: %s\n", err)
-		}
-	}
+	//if fi, err := os.Stat(destPath); err == nil {
+	//	if err := dest.Chmod(fi.Mode()); err != nil {
+	//		log.Fatalf("unable to chmod temp file: %s\n", err)
+	//	}
+	//	if err := dest.Chown(int(fi.Sys().(*syscall.Stat_t).Uid), int(fi.Sys().(*syscall.Stat_t).Gid)); err != nil {
+	//		log.Fatalf("unable to chown temp file: %s\n", err)
+	//	}
+	//}
 
 	return true
 }
